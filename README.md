@@ -11,7 +11,7 @@ Exemplo de criação de Login de App Mobile MAUI Xamarin Forms consumindo WebAPI
 
 Executa a aplicação Backend **https://github.com/Marcelofazan/apinet8-mobile-mysql** que se encontra no Github.
 
-  - [API-EF10-JWT](https://github.com/Marcelofazan/apinet8-mobile-mysql)
+  - [WebAPI-Mobile-MySQL](https://github.com/Marcelofazan/apinet8-mobile-mysql)
   
 O banco de dados é MySQL e deve estar hospedado Online , onde será maninupado por essa aplicação através de emulador Android .NET MAUI.
 
