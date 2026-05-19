@@ -18,7 +18,7 @@ O banco de dados é MySQL e deve estar hospedado Online , onde será maninupado 
 #### 🧪 Execução de Endpoints
 
 **(PessoaService.cs)**
-- Necessário alterar link da API hospedada para: 
+- Para executar a aplicação é necessário hospedar a APi em Hospedagem Online
 
 ```json
 https://[LINKWEB].tryasp.net/api/pessoa
