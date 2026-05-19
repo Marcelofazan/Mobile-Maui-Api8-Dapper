@@ -25,7 +25,7 @@ https://[LINKWEB].tryasp.net/api/pessoa
 ```
 
 #### Rotas dos métodos 
-| Tecnologia | Descrição |
+| Metodo | Descrição |
 |-----------|-----------|
-| **Metodo: GET/POST /api/Pessoa**  | Função: Buscar pessoa / Criar pessoa identificados por um URI. |
-
+| Metodo: GET | /api/Pessoa |
+| Metodo: POST | /api/Pessoa |
