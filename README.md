@@ -7,7 +7,7 @@ Exemplo de criação de App Mobile MAUI Xamarin Forms para validação de Usuár
 | **HTTPClient**  | Classe primária utilizada para enviar solicitações HTTP e receber respostas de recursos identificados por um URI. |
 | **XAML**  | Linguagem baseada em XML, para definir interfaces de usuário de forma declarativa para Android, iOS, macOS e Windows. |
 
-### Executar a aplicação
+#### 🔄 Executar a aplicação
 - Necessário banco de dados MySQL que deve estar hospedado Online , necessário para emulador Android .NET MAUI funcionar.
 
 #### 🧪 Executar Endpoints
@@ -34,7 +34,7 @@ Exemplo de criação de API para CRUD em NET8, com banco de dados MySQL.
 | **Dapper** |  Utilização de mapeamento rápido de resultados de consultas SQL diretas pela aplicação. |
 | **Resource** |  Armazenar dados de maneira estruturada |
 
-#### Executar da aplicação
+#### 🔄 Executar da aplicação
 - Para executar a aplicação é necessário executar o Script em uma Hospedagem Online.  
 
 #### ⚠️ String de conexão do banco
