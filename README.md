@@ -32,7 +32,7 @@ Exemplo de criação de API para CRUD em NET8, com banco de dados MySQL.
 | Tecnologia | Descrição |
 |-----------|-----------|
 | **Dapper** |  Utilização de mapeamento rápido de resultados de consultas SQL diretas pela aplicação. |
-| **Resource** |  Armazenar dados de maneira estruturada |
+| **Resource** | Armazenar em arquivo informações de maneira estruturada |
 
 #### 🔄 Executar da aplicação
 - Para executar a aplicação é necessário executar o Script em uma Hospedagem Online.  
