@@ -22,7 +22,7 @@ O Arquivo **(PessoaService.cs)** executa :
 | Metodo: GET | /api/Pessoa |
 | Metodo: POST | /api/Pessoa |
 
-- Para executar a aplicação é necessário hospedar a APi em Hospedagem Online
+- Para executar a aplicação é necessário hospedar a API em Hospedagem Online
 
 ```json
 https://[LINKWEB].tryasp.net/api/pessoa
