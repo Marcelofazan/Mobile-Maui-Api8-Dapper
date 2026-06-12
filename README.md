@@ -1,7 +1,7 @@
 ## 📱 Mobile-Maui-Login-Pessoa
 Exemplo de criação de App Mobile MAUI Xamarin Forms para validação de Usuário, consumindo WebAPI.
 
-#### O que você vai encontrar neste projeto
+#### 📋 O que você vai encontrar neste projeto
 | Tecnologia | Descrição |
 |-----------|-----------|
 | **HTTPClient**  | Classe primária utilizada para enviar solicitações HTTP e receber respostas de recursos identificados por um URI. |
@@ -31,7 +31,7 @@ https://[LINKWEB].tryasp.net/api/pessoa
 ## 🚀 Api8-Mobile-Mysql
 Exemplo de criação de API para CRUD em NET8, com banco de dados MySQL.
 
-#### O que você vai encontrar neste projeto
+#### 📋 O que você vai encontrar neste projeto
 | Tecnologia | Descrição |
 |-----------|-----------|
 | **Dapper** |  Utilização de mapeamento rápido de resultados de consultas SQL diretas pela aplicação. |
