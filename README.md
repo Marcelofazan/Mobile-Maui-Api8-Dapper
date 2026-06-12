@@ -1,4 +1,4 @@
-## 📱 Maui-Mobile-Login-Pessoa
+## 📱 Maui-Mobile-Api
 Exemplo de criação de App Mobile MAUI Xamarin Forms para validação de Usuário, consumindo WebAPI.
 
 #### 📋 O que você vai encontrar neste projeto
