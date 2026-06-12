@@ -28,7 +28,7 @@ O Arquivo **(PessoaService.cs)** executa :
 https://[LINKWEB].tryasp.net/api/pessoa
 ```
 
-## 🚀 Api8-Mobile-Mysql
+## 🚀 Api-Net8-Mysql
 Exemplo de criação de API para CRUD em NET8, com banco de dados MySQL.
 
 #### 📋 O que você vai encontrar neste projeto
