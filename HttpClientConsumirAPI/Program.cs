@@ -17,7 +17,7 @@ namespace HttpClientconsumirAPI
                 Console.ReadKey();
             }
 
-            string url = "https://[SEU_HOST].tryasp.net/api/Pessoa";
+            string url = "https://[LINKWEB].tryasp.net/api/Pessoa";
             bool continuarRodando = true;
 
             // O laço 'while' vai repetir tudo o que está dentro dele
