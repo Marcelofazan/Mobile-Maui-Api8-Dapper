@@ -13,6 +13,11 @@ Exemplo de App Mobile MAUI Xamarin Forms para validação de Usuário, consumind
 #### 🔄 Executar a aplicação
 - Necessário banco de dados MySQL que deve estar hospedado Online , necessário para emulador Android .NET MAUI funcionar.
 
+- Para executar a aplicação é necessário hospedar a API em Hospedagem Online
+```json
+https://[LINKWEB].tryasp.net/api/pessoa
+```
+
 #### 🧪 Executar Endpoints
 
 O Arquivo **(PessoaService.cs)** executa :
@@ -21,12 +26,6 @@ O Arquivo **(PessoaService.cs)** executa :
 |-----------|-----------|
 | Metodo: GET | /api/Pessoa |
 | Metodo: POST | /api/Pessoa |
-
-- Para executar a aplicação é necessário hospedar a API em Hospedagem Online
-
-```json
-https://[LINKWEB].tryasp.net/api/pessoa
-```
 
 ## 🚀 Api8-Mobile-Mysql
 Exemplo de criação de API para CRUD em NET8, com banco de dados MySQL.
