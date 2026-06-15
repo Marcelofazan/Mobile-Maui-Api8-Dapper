@@ -48,3 +48,12 @@ O script para criação da tabela do exemplo encontra-se na pasta **Database**.
 #### 🔄 Executar da aplicação
 - Para executar a aplicação é necessário executar o Script em uma Hospedagem Online.  
 
+## 📁 HttpClientConsumirAPI
+Exemplo de consumo da API com comandos HTTPClient por aplicativo console C#. 
+
+#### 🔄 Executar a aplicação 
+- Para executar a aplicação é necessário alterar a url no arquivo **program.cs**
+
+```json
+https://[SEU_HOST].tryasp.net/api/pessoa
+```
