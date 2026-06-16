@@ -1,5 +1,5 @@
 ## 📱 Mobile-Maui-Login-Pessoa
-Exemplo de App Mobile MAUI Xamarin Forms para validação de Usuário, consumindo API.
+Exemplo de App Mobile MAUI Xamarin Forms para validação de Usuário, consumindo API com banco de dados MySQL.
 
 #### 📋 O que você vai encontrar neste projeto
 | Tecnologia | Descrição |
