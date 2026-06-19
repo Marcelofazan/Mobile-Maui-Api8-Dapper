@@ -1,5 +1,5 @@
 ## 📱 Mobile-Maui-Login-Pessoa
-Exemplo de App Mobile de Login de usuário em C# .NET MAUI Xamarin Forms, utilizando API C# ASP.NET Core 8 com banco de dados MySQL.
+Exemplo de App Mobile de Login de usuário em C# .NET MAUI Xamarin Forms.
 
 #### 📋 O que você vai encontrar neste projeto
 | Tecnologia | Descrição |
@@ -28,7 +28,7 @@ O Arquivo **(PessoaService.cs)** executa :
 | Metodo: POST | /api/Pessoa |
 
 ## 🚀 Api8-Mobile-Mysql
-Exemplo de criação de API para CRUD em NET8, com banco de dados MySQL.
+Exemplo de API para em C# .ASP.NET Core 8 com banco de dados MySQL.
 
 #### 📋 O que você vai encontrar neste projeto
 | Tecnologia | Descrição |
