@@ -6,9 +6,6 @@ Exemplo de App Mobile de Login de usuário em C# .NET MAUI Xamarin Forms.
 |-----------|-----------|
 | **HTTPClient**  | Classe primária utilizada para enviar solicitações HTTP e receber respostas de recursos identificados por um URI. |
 | **XAML**  | Linguagem baseada em XML, para definir interfaces de usuário de forma declarativa para Android, iOS, macOS e Windows. |
-
-#### Requisitos do Projeto
-- Necessário **Docker** instalado.
   
 #### 🔄 Executar a aplicação
 - Necessário banco de dados MySQL que deve estar hospedado Online , necessário para emulador Android .NET MAUI funcionar.
