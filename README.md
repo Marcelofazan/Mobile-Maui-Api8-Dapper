@@ -33,6 +33,9 @@ Exemplo de API para em C# .ASP.NET Core 8 com banco de dados MySQL.
 | **Dapper** |  Utilização de mapeamento rápido de resultados de consultas SQL diretas pela aplicação. |
 | **Resource** | Armazenar em arquivo informações de maneira estruturada |
 
+#### 💬 Requisitos do Projeto
+- Para executar a aplicação é necessário executar o Script do MySQL.
+
 #### ⚠️ String de conexão do banco
 Modifique a string de conexão no arquivo appsettings.json, no trecho indicado:
 
