@@ -1,5 +1,5 @@
 ## 📱 Maui-Mobile-Login-Api8-Dapper
-Exemplo de App Mobile de Login de usuário em C# .NET MAUI Xamarin Forms.
+Exemplo de Login do usuário em App Mobile em C# .NET MAUI Xamarin Forms.
 
 #### 📋 O que você vai encontrar neste projeto
 | Tecnologia | Descrição |
