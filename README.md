@@ -1,5 +1,5 @@
 ## 📱 Maui-Mobile-Login-Api8-Dapper
-Exemplo de projeto Mobile em C# .NET MAUI Xamarin Forms.
+Exemplo de projeto Mobile em C# ASP.NET Core e MAUI Xamarin Forms.
 
 #### 📋 O que você vai encontrar neste projeto
 | Tecnologia | Descrição |
