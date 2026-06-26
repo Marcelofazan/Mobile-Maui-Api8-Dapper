@@ -1,6 +1,7 @@
 ## 📱 Maui-Mobile-Login-Api8-Dapper
 Exemplo de projeto Mobile em C# ASP.NET Core e MAUI Xamarin Forms.
 
+## 📁 Mobile-Maui-Login-Pessoa
 #### 📋 O que você vai encontrar neste projeto
 | Tecnologia | Descrição |
 |-----------|-----------|
@@ -24,7 +25,7 @@ O Arquivo **(PessoaService.cs)** executa :
 | Metodo: GET | /api/Pessoa |
 | Metodo: POST | /api/Pessoa |
 
-## 🚀 Api8-Mobile-Mysql
+## 📁 Api8-Mobile-Mysql
 #### 📋 O que você vai encontrar neste projeto
 | Tecnologia | Descrição |
 |-----------|-----------|
