@@ -11,7 +11,7 @@ namespace AppMobile.Service
 {
     public static class PessoaService
     {
-        public const string url = "https://api21mobile51789.tryasp.net/api/pessoa";
+        public const string url = "https://[LINKWEB].tryasp.net/api/pessoa";
 
         public static async Task<List<Pessoa>> GetPessoasAsync()  
         {
