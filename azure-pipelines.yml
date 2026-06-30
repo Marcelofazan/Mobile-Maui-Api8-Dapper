@@ -23,7 +23,6 @@ stages:
         packageType: 'sdk'
         version: '8.0.x'
 
-    # Correção: Usando a tarefa nativa que aceita padrões de busca glob
     - task: DotNetCoreCLI@2
       displayName: 'Restaurar dependências da API'
       inputs:
@@ -70,7 +69,7 @@ stages:
     - script: dotnet workload install maui
       displayName: 'Instalar Workload MAUI (.NET 10)'
 
-    # No MAUI ainda usamos script para o workload, mas mudamos a pasta de execução
+    # Apontando para a pasta raiz correta do mobile
     - script: dotnet workload restore
       workingDirectory: 'Mobile-Maui-Login-Pessoa'
       displayName: 'Restaurar Workloads do Projeto'
@@ -88,10 +87,11 @@ stages:
         projects: 'Mobile-Maui-Login-Pessoa/**/*.csproj'
         arguments: '--configuration $(buildConfiguration) -f net10.0-android --no-restore'
 
+    # Correção: Caminho atualizado adicionando a subpasta '/AppMobile/' detectada nos logs
     - task: CopyFiles@2
       displayName: 'Separar Pacotes Compilados (APK)'
       inputs:
-        SourceFolder: 'Mobile-Maui-Login-Pessoa/bin/$(buildConfiguration)/net10.0-android'
+        SourceFolder: 'Mobile-Maui-Login-Pessoa/AppMobile/bin/$(buildConfiguration)/net10.0-android'
         Contents: '**/*.apk'
         TargetFolder: '$(Build.ArtifactStagingDirectory)/mobile-artifact'
 
