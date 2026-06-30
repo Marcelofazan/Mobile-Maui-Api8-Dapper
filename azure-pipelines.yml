@@ -2,7 +2,7 @@ trigger:
 - main
 
 pool:
-  vmImage: 'windows-latest' # Windows é obrigatório para compilar MAUI e ferramentas do .NET 10
+  vmImage: 'windows-latest'
 
 variables:
   buildConfiguration: 'Release'
@@ -23,10 +23,11 @@ stages:
         packageType: 'sdk'
         version: '8.0.x'
 
-    - script: dotnet restore Api8-Mobile-Mysql/Api8-Mobile-Mysql.csproj
+    # O asterisco duplo faz a busca automática do arquivo .csproj nesta pasta
+    - script: dotnet restore Api8-Mobile-Mysql/**/*.csproj
       displayName: 'Restaurar dependências da API'
 
-    - script: dotnet build Api8-Mobile-Mysql/Api8-Mobile-Mysql.csproj --configuration $(buildConfiguration) --no-restore
+    - script: dotnet build Api8-Mobile-Mysql/**/*.csproj --configuration $(buildConfiguration) --no-restore
       displayName: 'Compilar API'
 
     - task: DotNetCoreCLI@2
@@ -34,7 +35,7 @@ stages:
       inputs:
         command: 'publish'
         publishWebProjects: false
-        projects: 'Api8-Mobile-Mysql/Api8-Mobile-Mysql.csproj'
+        projects: 'Api8-Mobile-Mysql/**/*.csproj'
         arguments: '--configuration $(buildConfiguration) --output $(Build.ArtifactStagingDirectory)/api-artifact'
         zipAfterPublish: true
 
@@ -47,7 +48,7 @@ stages:
 # ==========================================
 - stage: BuildMobile
   displayName: 'Build do Mobile .NET 10'
-  dependsOn: [] # Executa em paralelo com a API para economizar tempo
+  dependsOn: [] 
   jobs:
   - job: CompilarMaui
     displayName: 'Compilar e Publicar App MAUI'
@@ -57,18 +58,19 @@ stages:
       inputs:
         packageType: 'sdk'
         version: '10.0.x'
-        includePreviewVersions: true # Importante se o .NET 10 ainda estiver em ciclo de preview/RC no seu ambiente
+        includePreviewVersions: true 
 
     - script: dotnet workload install maui
       displayName: 'Instalar Workload MAUI (.NET 10)'
 
-    - script: dotnet workload restore Mobile-Maui-Login-Pessoa/Mobile-Maui-Login-Pessoa.csproj
+    # O asterisco duplo também resolve o mobile sem precisar saber o nome exato do arquivo
+    - script: dotnet workload restore Mobile-Maui-Login-Pessoa/**/*.csproj
       displayName: 'Restaurar Workloads do Projeto'
 
-    - script: dotnet restore Mobile-Maui-Login-Pessoa/Mobile-Maui-Login-Pessoa.csproj
+    - script: dotnet restore Mobile-Maui-Login-Pessoa/**/*.csproj
       displayName: 'Restaurar Pacotes NuGet do Mobile'
 
-    - script: dotnet build Mobile-Maui-Login-Pessoa/Mobile-Maui-Login-Pessoa.csproj --configuration $(buildConfiguration) -f net10.0-android --no-restore
+    - script: dotnet build Mobile-Maui-Login-Pessoa/**/*.csproj --configuration $(buildConfiguration) -f net10.0-android --no-restore
       displayName: 'Compilar MAUI (Android net10.0)'
 
     - task: CopyFiles@2
