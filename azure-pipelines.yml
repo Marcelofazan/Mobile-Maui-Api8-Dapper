@@ -23,12 +23,19 @@ stages:
         packageType: 'sdk'
         version: '8.0.x'
 
-    # O asterisco duplo faz a busca automática do arquivo .csproj nesta pasta
-    - script: dotnet restore Api8-Mobile-Mysql/**/*.csproj
+    # Correção: Usando a tarefa nativa que aceita padrões de busca glob
+    - task: DotNetCoreCLI@2
       displayName: 'Restaurar dependências da API'
+      inputs:
+        command: 'restore'
+        projects: 'Api8-Mobile-Mysql/**/*.csproj'
 
-    - script: dotnet build Api8-Mobile-Mysql/**/*.csproj --configuration $(buildConfiguration) --no-restore
+    - task: DotNetCoreCLI@2
       displayName: 'Compilar API'
+      inputs:
+        command: 'build'
+        projects: 'Api8-Mobile-Mysql/**/*.csproj'
+        arguments: '--configuration $(buildConfiguration) --no-restore'
 
     - task: DotNetCoreCLI@2
       displayName: 'Publicar API'
@@ -36,7 +43,7 @@ stages:
         command: 'publish'
         publishWebProjects: false
         projects: 'Api8-Mobile-Mysql/**/*.csproj'
-        arguments: '--configuration $(buildConfiguration) --output $(Build.ArtifactStagingDirectory)/api-artifact'
+        arguments: '--configuration $(buildConfiguration) --output $(Build.ArtifactStagingDirectory)/api-artifact --no-restore'
         zipAfterPublish: true
 
     - publish: $(Build.ArtifactStagingDirectory)/api-artifact
@@ -63,15 +70,23 @@ stages:
     - script: dotnet workload install maui
       displayName: 'Instalar Workload MAUI (.NET 10)'
 
-    # O asterisco duplo também resolve o mobile sem precisar saber o nome exato do arquivo
-    - script: dotnet workload restore Mobile-Maui-Login-Pessoa/**/*.csproj
+    # No MAUI ainda usamos script para o workload, mas mudamos a pasta de execução
+    - script: dotnet workload restore
+      workingDirectory: 'Mobile-Maui-Login-Pessoa'
       displayName: 'Restaurar Workloads do Projeto'
 
-    - script: dotnet restore Mobile-Maui-Login-Pessoa/**/*.csproj
+    - task: DotNetCoreCLI@2
       displayName: 'Restaurar Pacotes NuGet do Mobile'
+      inputs:
+        command: 'restore'
+        projects: 'Mobile-Maui-Login-Pessoa/**/*.csproj'
 
-    - script: dotnet build Mobile-Maui-Login-Pessoa/**/*.csproj --configuration $(buildConfiguration) -f net10.0-android --no-restore
+    - task: DotNetCoreCLI@2
       displayName: 'Compilar MAUI (Android net10.0)'
+      inputs:
+        command: 'build'
+        projects: 'Mobile-Maui-Login-Pessoa/**/*.csproj'
+        arguments: '--configuration $(buildConfiguration) -f net10.0-android --no-restore'
 
     - task: CopyFiles@2
       displayName: 'Separar Pacotes Compilados (APK)'
